@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Redirezione Questionario</title>
+    <script type="text/javascript">
+        function redirect() {
+            var urlParams = new URLSearchParams(window.location.search);
+            var responseCount = parseInt(urlParams.get('count'), 10);
+
+            if (responseCount <= 50) {
+                window.location.href = "https://forms.office.com/e/FGWBNGeVCh";
+            } else if (responseCount <= 100) {
+                window.location.href = "https://forms.office.com/e/iEXyvPahHm";
+            } else if (responseCount <= 150) {
+                window.location.href = "https://forms.office.com/e/iBXJ6hdRrU";
+            } else {
+                window.location.href = "https://forms.office.com/e/XQHtX1uwkA";
+            }
+        }
+    </script>
+</head>
+<body onload="redirect()">
+    <p>Reindirizzamento in corso...</p>
+</body>
+</html>
